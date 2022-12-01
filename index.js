@@ -1,18 +1,18 @@
-const colors = require('colors')
+import colors from "colors";
 
 let [start, end] = process.argv.splice(2);
-const regexp = new RegExp('[a-zA-Z]+');
+const regexp = new RegExp("[a-zA-Z]+");
 
 if (!start || !end) {
-  console.log('Одно из чисел введено не корректно!');
+  console.log("Одно из чисел введено не корректно!");
 } else if (regexp.test(start) || regexp.test(end)) {
-  console.log('Один из аргументов не является числом!');
+  console.log("Один из аргументов не является числом!");
 } else {
   start = parseInt(start);
   end = parseInt(end);
   if (start > end) {
     console.log(
-      'Задайте верный отрезок! Начальное значение не может быть больше конечного.'
+      "Задайте верный отрезок! Начальное значение не может быть больше конечного."
     );
   } else if (start == end) {
     checkNumber(start)
