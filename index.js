@@ -1,4 +1,4 @@
-const colors = require('colors')
+import colors from 'colors';
 
 let [start, end] = process.argv.splice(2);
 const regexp = new RegExp('[a-zA-Z]+');
